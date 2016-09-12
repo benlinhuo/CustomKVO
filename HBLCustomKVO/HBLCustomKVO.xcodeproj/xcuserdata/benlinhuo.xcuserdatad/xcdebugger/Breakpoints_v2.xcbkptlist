@@ -154,12 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HBLCustomKVO/Observation1ViewController.m"
-            timestampString = "495300997.093589"
+            timestampString = "495371285.155395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-observerHBLValueForKey:ofObject:newValue:oldValue:context:"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
