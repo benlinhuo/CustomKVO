@@ -22,19 +22,24 @@
 
 @end
 
+static void *ktestObserv = &ktestObserv;
+
 @implementation Observation1ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    testObservation = [HBLTestObservation new];
-    [testObservation addHBLObserver:self forKey:@"userName" context:nil];
+    testObservation = [HBLTestObservation shared];
+    [testObservation addHBLObserver:self forKey:@"userName" context:@"testObservation"];
     
-    //    [testObservation addObserver:self forKeyPath:@"userName" options:NSKeyValueObservingOptionNew context:nil];
+//    [testObservation addObserver:self forKeyPath:@"userName" options:NSKeyValueObservingOptionNew context:ktestObserv];
 }
 
 //- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 //{
+//    if (context == ktestObserv) {
+//        NSLog(@"same");
+//    }
 //    NSLog(@"sdfsdf");
 //
 //    NSLog(@"isa= %s", object_getClassName(object)); // 获取 isa 指针所指向的类

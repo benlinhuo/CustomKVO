@@ -58,6 +58,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C5AC88511D85A72300C5A762 /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				C5E3CA311D7E68E700C1285C /* NSObject+KVO.h */,
+				C5E3CA321D7E68E700C1285C /* NSObject+KVO.m */,
+				C5E3CA631D801EF400C1285C /* HBLObservationInfo.h */,
+				C5E3CA641D801EF400C1285C /* HBLObservationInfo.m */,
+			);
+			name = KVO;
+			sourceTree = "<group>";
+		};
 		C5E3CA0E1D7E688F00C1285C = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +88,7 @@
 		C5E3CA191D7E688F00C1285C /* HBLCustomKVO */ = {
 			isa = PBXGroup;
 			children = (
+				C5AC88511D85A72300C5A762 /* KVO */,
 				C5E3CA1D1D7E688F00C1285C /* AppDelegate.h */,
 				C5E3CA1E1D7E688F00C1285C /* AppDelegate.m */,
 				C5E3CA201D7E688F00C1285C /* ViewController.h */,
@@ -86,10 +98,6 @@
 				C5E3CA281D7E688F00C1285C /* LaunchScreen.storyboard */,
 				C5E3CA2B1D7E688F00C1285C /* Info.plist */,
 				C5E3CA1A1D7E688F00C1285C /* Supporting Files */,
-				C5E3CA311D7E68E700C1285C /* NSObject+KVO.h */,
-				C5E3CA321D7E68E700C1285C /* NSObject+KVO.m */,
-				C5E3CA631D801EF400C1285C /* HBLObservationInfo.h */,
-				C5E3CA641D801EF400C1285C /* HBLObservationInfo.m */,
 				C5AC88441D83FED200C5A762 /* HBLTestObservation.h */,
 				C5AC88451D83FED200C5A762 /* HBLTestObservation.m */,
 				C5AC88471D84192200C5A762 /* Observation2ViewController.h */,

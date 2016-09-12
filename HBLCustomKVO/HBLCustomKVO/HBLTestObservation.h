@@ -12,4 +12,7 @@
 
 @property (nonatomic, strong) NSString *userName;
 
++ (instancetype)shared;
+
+
 @end

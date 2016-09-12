@@ -51,12 +51,14 @@ static Class new_class(id self)
     Class originalClass = object_getClass(self);
     Class newClass = object_getClass(self); // object_getClass 获取一个实例的类
     NSString *originalClassName = NSStringFromClass(originalClass);
+    
     if (![originalClassName hasPrefix:kHBLKVOClassNamePrefix]) {
         newClass = [self generateNewClassByOriginalClassName:originalClassName];
         // 将 self 对象设置新类类型 newClass
         // 通过将 isa 的指向更改为 newClass
         object_setClass(self, newClass);
     }
+    
     
     // 3. 改写 setter 方法
     if (![self hasSelector:setterSelector]) {

@@ -10,6 +10,16 @@
 
 @implementation HBLTestObservation
 
++ (instancetype)shared
+{
+    static dispatch_once_t onceToken;
+    static HBLTestObservation *instance = nil;
+    dispatch_once(&onceToken, ^{
+        instance = [HBLTestObservation new];
+    });
+    return instance;
+}
+
 - (void)setxxxx
 {
     NSLog(@"sdfsdfsdfsdf");

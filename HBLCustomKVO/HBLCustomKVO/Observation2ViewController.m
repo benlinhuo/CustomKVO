@@ -22,14 +22,26 @@
 
 @end
 
+static void *ktestContext  = &ktestContext;
+
 @implementation Observation2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    testObservation = [HBLTestObservation new];
-    [testObservation addHBLObserver:self forKey:@"userName" context:nil];
+    testObservation = [HBLTestObservation shared];
+    [testObservation addHBLObserver:self forKey:@"userName" context:@"testContext"];
+    
+//    [testObservation addObserver:self forKeyPath:@"userName" options:NSKeyValueObservingOptionNew context:ktestContext];
 }
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
+//{
+//    if (context == ktestContext) {
+//        NSLog(@"same");
+//    }
+//    NSLog(@"sdfsdf");
+//}
 
 - (void)observerHBLValueForKey:(NSString *)key ofObject:(NSObject *)object newValue:(id)newValue oldValue:(id)oldValue context:(NSString *)context
 {
@@ -53,5 +65,9 @@
     [testObservation removeHBLObserver:self forKey:@"userName"];
 }
 
+- (void)dealloc
+{
+//    [testObservation removeObserver:self forKeyPath:@"userName"];
+}
 
 @end
